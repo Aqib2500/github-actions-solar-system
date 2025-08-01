@@ -20,6 +20,10 @@ jobs:
           with:
             node-version: 18
         - name: install dependencies
-          run:  npm install
+          run:  |
+            cd github-actions-solar-system
+            npm install
         - name: Unit Testing 
-          run: npm test  
+          run: |
+            cd github-actions-solar-system
+            npm test  
